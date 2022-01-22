@@ -1,0 +1,62 @@
+:root{
+    --headerColor: #f2f2f2;
+    --iconsColor: #7c7c7c;
+}
+
+.header{
+    width: 100%;
+    position: fixed;
+    top: 0;
+    height: 8rem;
+    background-color: var(--headerColor);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 200;
+}
+
+.topLeft,.topRight{
+    flex: 3;
+    text-align: center;
+}
+.topRight{
+    display: flex;
+    align-items: center;
+}
+.topCenter{
+    flex: 6;
+}
+
+.topImg{
+    width: 3rem;
+    height: 3rem;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.rrssIcon,.searchIcon{
+    font-size: 1rem;
+    text-align: center;
+    margin: 0 .5rem;
+    cursor: pointer;
+    color: var(--iconsColor);
+}
+
+.topLinks{
+    display: flex;
+    list-style: none;
+    justify-content: center;
+    align-items: center;
+}
+
+.topLink--item{
+    margin: 0 .5rem;
+    cursor: pointer;
+    transition: .3s ease;
+    color: #7c7c7c;
+}
+.topLink--item:hover{
+    color: #8ba2b4;
+    transition: .3s ease;
+}
