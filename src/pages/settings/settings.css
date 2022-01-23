@@ -1,0 +1,68 @@
+.settings{
+    margin-top: 8rem;
+    font-family: 'Poppins';
+}
+
+.settingsWrapper{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.settingsTitle{
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.settingsTitle span {
+    cursor: pointer;
+}
+
+.settingsTitle span:nth-child(2) {
+    color: red;
+}
+
+.settingsForm{
+    margin-top: 3rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+}
+
+.settingsForm label{
+    text-align: center;
+}
+
+.settingsForm input {
+    border: none;
+    outline: none;
+    font-size: 1rem;
+    margin-bottom: 1rem;
+}
+
+.settingsForm input:focus{
+    border-bottom: 1px solid black;
+}
+
+.settingsButtonUpdate{
+    background-color: #2575db;
+    border: none;
+    border-radius: 1rem;
+    width: 30%;
+    padding: 1rem;
+    color: white;
+    align-self: center;
+}
+
+.settingsProfilePicture img{
+    border-radius: 50%;
+    object-fit: cover;
+    height: 20rem;
+    width: 20rem;
+}
+
+.settingProfileIcon{
+    padding-right: .5rem;
+}

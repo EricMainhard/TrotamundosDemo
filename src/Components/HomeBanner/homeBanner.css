@@ -1,0 +1,16 @@
+.homeBanner{
+    height: 80vh;
+    background-image: url('../../../public/img/homeBanner.jpg');
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+.homeBanner-content{
+    color: white;
+    text-align: center;
+    font-family: 'Poppins';
+    padding: 2rem;
+    margin-right: 5rem;
+}

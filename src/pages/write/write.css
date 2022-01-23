@@ -1,0 +1,71 @@
+.write{
+    margin-top: 8rem;
+}
+
+.write img{
+    width: 100%;
+}
+.writeForm{
+    position: relative;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+.writeFormGroup{
+    margin-top: 2rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.writeFormGroup label{
+    align-self: flex-start;
+}
+
+.writeIcon{
+    width: 2rem;
+    height: 2rem;
+    border-radius: 50%;
+    border: 1px solid black;
+    display: flex;
+    align-items: center;
+    color: #7c7c7c;
+    cursor: pointer;
+    justify-content: center;
+    margin-bottom: 1rem;
+    align-self: flex-start;
+}
+
+.writeInput{
+    border: none;
+    outline: none;
+    font-size: 2rem;
+    width: 70vw;
+    font-family: 'Cormorant Garamond', serif;
+}
+.writeInput:focus{
+    border-bottom: 1px solid black;
+}
+
+.writeText{
+    font-size: 1.5rem;
+    width: 70vw;
+    resize: none;
+    font-family: 'Cormorant Garamond', serif;
+}
+
+.writeSubmit{
+    position: absolute;
+    color: white;
+    background-color: #2575db;
+    border: none;
+    padding: 1rem;
+    border-radius: 30%;
+    bottom: -5rem;
+    cursor: pointer;
+    font-family: 'Poppins';
+}
+

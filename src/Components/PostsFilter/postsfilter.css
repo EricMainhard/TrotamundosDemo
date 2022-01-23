@@ -1,0 +1,16 @@
+.postsFilter{
+    display: flex;
+    justify-content: space-around;
+    margin-top: 8rem;
+    font-family: 'Cormorant Garamond', serif;
+}
+
+.postsCats{
+    list-style: none;
+    display: flex;
+    gap: 1rem;
+    color: #7c7c7c;
+    font-weight: 400;
+    font-size: 1.25rem;
+    cursor: pointer;
+}

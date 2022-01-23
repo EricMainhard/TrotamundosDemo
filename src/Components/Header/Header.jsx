@@ -1,7 +1,9 @@
 import React from "react";
+import {Link} from "react-router-dom";
 import './header.css';
 
 function Header(){
+    const user = false;
    return(
         <div className="header">
             <div className="topLeft">
@@ -11,17 +13,34 @@ function Header(){
                 <i className="fab fa-twitter rrssIcon" ></i>
             </div>
             <div className="topCenter">
+                <i className="menuIcon fas fa-bars"></i>
                 <ul className="topLinks">
-                    <li className="topLink--item">Inicio</li>
-                    <li className="topLink--item">Sobre mi</li>
-                    <li className="topLink--item">Destinos</li>
-                    <li className="topLink--item">Gastronomía</li>
-                    <li className="topLink--item">Relax</li>
-                    <li className="topLink--item">Videos</li>
+                    <li className="topLink--item">
+                        <Link to="/">Inicio</Link>
+                    </li>
+                    <li className="topLink--item">
+                        <Link to="/post/destinys">Destinos</Link>
+                    </li>
+                    <li className="topLink--item">
+                        <Link to="/post/gastronomy">Gastronomía</Link>
+                    </li>
+                    <li className="topLink--item">
+                        <Link to="/post/relax">Relax</Link>
+                    </li>
+                    <li className="topLink--item">
+                        <Link to="/write">Write</Link>
+                    </li>
+                    <li className="topLink--item">
+                        <Link to="/">{user && "Log out"}</Link>
+                    </li>
                 </ul>
             </div>
             <div className="topRight">
-                <img src="../avatar.jpg" alt="" className="topImg"/>
+                {user ? 
+                <img src="../img/avatar.jpg" alt="" className="topImg"/>
+                    :
+                ''
+                }
                 <i className="fas fa-search searchIcon"></i>
             </div>
         </div>
