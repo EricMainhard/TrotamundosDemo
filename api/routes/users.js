@@ -42,4 +42,17 @@ router.put("/:id", async (req,res)=>{
     }
 });
 
+// GET USER
+
+router.get("/:id", async (req,res) => {
+    try {
+        const user = await User.findById(req.params.id);
+        const {password, ...others} = user._doc;
+        res.status(200).json(others);
+    }
+    catch(e){
+        res.status(400).json(e);
+    }
+});
+
 module.exports = router;

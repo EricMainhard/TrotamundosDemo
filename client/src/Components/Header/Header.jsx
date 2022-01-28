@@ -3,7 +3,7 @@ import {Link} from "react-router-dom";
 import './header.css';
 
 function Header(){
-    const user = true;
+    const user = false;
    return(
         <div className="header">
             <div className="topLeft">
