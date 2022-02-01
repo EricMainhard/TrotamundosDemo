@@ -35,6 +35,6 @@ app.use("/api/users", userRoute);
 app.use("/api/posts", postRoute);
 app.use("/api/categories", categoriesRoute);
 
-app.listen("3001",()=>{
-    console.log('Listen to port 3001');
+app.listen("5000",()=>{
+    console.log('Listen to port 5000');
 })
