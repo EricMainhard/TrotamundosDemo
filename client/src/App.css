@@ -5,7 +5,8 @@
 }
 
 .container{
-    width: 100%;
+    width: 80%;
+    margin: auto;
 }
 
 hr{
@@ -19,6 +20,6 @@ hr{
 @media screen and (min-width:768px) {
     .container{
         width: 80%;
-        margin: auto;
+        
     }
 }

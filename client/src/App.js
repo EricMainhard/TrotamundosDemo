@@ -12,6 +12,7 @@ import Write from './pages/write/Write';
 import Settings from './pages/settings/Settings';
 import Login from './pages/login/Login';
 import Register from './pages/register/Register';
+import NotFound from './Components/NotFound/NotFound.jsx';
 
 
 function App() {
@@ -26,6 +27,7 @@ function App() {
         <Route path="/settings" element={user ?<Settings /> : <Login/>}/>
         <Route path="/register" element={user ? <Home/> : <Register />}/>
         <Route path="/login" element={user ? <Home/> : <Login />}/>
+        <Route component={NotFound} />
       </Routes>
     </Router>
   );

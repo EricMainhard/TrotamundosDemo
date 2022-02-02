@@ -1,7 +1,23 @@
 import './singlepost.css';
-import React from 'react';
+import React, { useEffect, useState } from 'react';
+import { useLocation } from 'react-router-dom';
+import axios from 'axios';
 
 function SinglePost(){
+
+    const [post,setPost] = useState([]);
+
+    const location = useLocation();
+    const path = location.pathname.split('/')[2];
+
+    useEffect(()=>{
+        const getPost = async()=>{
+            let res = await axios.get(`/posts/${path}`);
+            setPost(res.data);
+        }
+        getPost();
+    },[path])
+
     return(
         <div className='singlePost container'>
             <div className="singlePostWrapper">
@@ -9,10 +25,9 @@ function SinglePost(){
 
                 </div>
                 <div className="singlePostContent">
-                    <h3>Los tratamientos que debes probar en un Spa</h3>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nisi, ab? Lorem ipsum dolor sit amet consectetur adipisicing elit. Nisi, ab?</p>
-                    <img src="/img/post.jpg" alt="" />
-                    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Laborum unde beatae excepturi! Accusantium architecto minus enim pariatur laboriosam ratione repellendus.</p>
+                    <h3>{post.title}</h3>
+                    <p>{post.description}</p>
+                    {post.photo && <img src={post.photo} alt="" />}
                 </div>
                 <hr/>
                 <div className="singlePostFooter">
@@ -23,7 +38,9 @@ function SinglePost(){
                     <i className="fab fa-twitter postIcon" ></i>
                     </div>
                     <div className="singlePostFooter_cat">
-                        <span>Relax</span>
+                        {post.categories && post.categories.map(cat => {
+                            <span>{cat}</span>
+                        })}
                     </div>
                 </div>
             </div>
