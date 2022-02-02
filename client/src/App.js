@@ -27,7 +27,7 @@ function App() {
         <Route path="/settings" element={user ?<Settings /> : <Login/>}/>
         <Route path="/register" element={user ? <Home/> : <Register />}/>
         <Route path="/login" element={user ? <Home/> : <Login />}/>
-        <Route component={NotFound} />
+        <Route path="*"element={<NotFound/>}/>
       </Routes>
     </Router>
   );

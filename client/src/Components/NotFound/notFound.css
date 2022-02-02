@@ -1,3 +1,31 @@
 .notFound{
     margin-top: 8rem;
+    height: calc(100vh - 8rem);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    font-family: 'Poppins';
 }
+
+.backLink{
+    color: black;
+    position: relative;
+}
+
+.backLink:after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    margin: auto;
+    transform: scaleX(0);
+    height: 2px;
+    bottom: 0;
+    left: 0;
+    background-color: #0087ca;
+    transition: transform 0.25s ease-out;
+  }
+  
+  .backLink:hover:after {
+    transform: scaleX(1.5);
+  }
