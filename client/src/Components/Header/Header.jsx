@@ -16,13 +16,13 @@ function Header(){
                 <i className="menuIcon fas fa-bars"></i>
                 <ul className="topLinks">
                     <li className="topLink--item">
-                        <Link className="link" to="/">Inicio</Link>
+                        <Link className="link" to="/">Home</Link>
                     </li>
                     <li className="topLink--item">
-                        <Link className="link" to="/post/destinys">Destinos</Link>
+                        <Link className="link" to="/post/destinies">Destinies</Link>
                     </li>
                     <li className="topLink--item">
-                        <Link className="link" to="/post/gastronomy">Gastronomía</Link>
+                        <Link className="link" to="/post/gastronomy">Gastronomy</Link>
                     </li>
                     <li className="topLink--item">
                         <Link className="link" to="/post/relax">Relax</Link>

@@ -8,8 +8,10 @@ function Post({post}){
             {post.photo && <img src={post.photo} className="postImage" alt="" />}
             <div className="postInfo">
                 <div className="postAuthor">
-                    <i className=" postAuthorIcon fas fa-user-circle"></i>
-                    <span>{post.author}</span>
+                    <Link to={`/?author=${post.author}`}>
+                        <i className=" postAuthorIcon fas fa-user-circle"></i>
+                        <span>{post.author}</span>
+                    </Link>
                 </div>
                 <div className="postDate">
                     <span>{new Date(post.createdAt).toDateString()}</span>

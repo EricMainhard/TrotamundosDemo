@@ -5,8 +5,8 @@ import React from 'react';
 function Posts({posts}){
     return(
         <div className='posts container'>
-            {posts.map((p,i) => {
-                return <Post key={i} post={p}/>
+            {posts.map((p) => {
+                return <Post key={p._id} post={p}/>
             })}
         </div>
     )

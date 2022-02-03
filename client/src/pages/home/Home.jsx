@@ -4,18 +4,21 @@ import HomeBanner from '../../Components/HomeBanner/HomeBanner';
 import CardsGrid from '../../Components/CardsGrid/CardsGrid';
 import Posts from '../../Components/Posts/Posts';
 import axios from 'axios';
+import { useLocation } from 'react-router-dom';
 
 function Home(){
 
     const [posts,setPosts] = useState([]);
+    const {search} = useLocation();
 
     useEffect(()=>{
         const fetchPosts = async ()=>{
-            let res = await axios.get("/posts")
+            let res = await axios.get("/posts"+search)
             setPosts(res.data);
+            console.log(res)
         }
         fetchPosts();
-    },[])
+    },[search])
     return(
         <>
             <div className="home">

@@ -18,9 +18,9 @@ function PostsFilter(){
     return(
         <div className="postsFilter">
             <ul className="postsCats">
-                <li><Link className="link" to="/post">Todas las entradas</Link></li>
+                <li><Link className="link" to="/posts">All entries</Link></li>
                 {cats.map(cat => {
-                    <li><Link className="link" to={`/post/${cat}`}>{cat}</Link></li>
+                    return <li><Link className="link" to={`/post/${cat.name}`}>{cat.name}</Link></li>
                 })}
             </ul>
             <i className="fas fa-search searchIcon"></i>

@@ -2,6 +2,7 @@
 .card{
     width: 20rem;
     position: relative;
+    height: 20rem;
 }
 
 .cardsHeading{
@@ -11,6 +12,7 @@
 
 .card img{
     width: 100%;
+    height: 100%;
 }
 
 .card_title{

@@ -10,6 +10,7 @@ import Home from './pages/home/Home';
 import Single from './pages/single/Single';
 import Write from './pages/write/Write';
 import Settings from './pages/settings/Settings';
+import PostsPage from './pages/postsPage/PostsPage';
 import Login from './pages/login/Login';
 import Register from './pages/register/Register';
 import NotFound from './Components/NotFound/NotFound.jsx';
@@ -23,6 +24,7 @@ function App() {
       <Routes>
         <Route path="/" element={<Home />}/>
         <Route path="/post/:id" element={<Single />}/>
+        <Route path="/posts" element={<PostsPage />}/>
         <Route path="/write" element={user ? <Write /> : <Login/>}/>
         <Route path="/settings" element={user ?<Settings /> : <Login/>}/>
         <Route path="/register" element={user ? <Home/> : <Register />}/>
