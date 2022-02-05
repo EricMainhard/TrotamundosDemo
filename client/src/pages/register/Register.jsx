@@ -8,7 +8,7 @@ function Register(){
     const [username,setUsername] = useState();
     const [email,setEmail] = useState();
     const [password,setPassword] = useState();
-    const [error,setError] = useState();
+    const [error,setError] = useState(false);
 
     const handleUsername = (e)=> {
         let username = e.target.value;
@@ -27,6 +27,7 @@ function Register(){
 
     const handleSubmit = async (e)=> {
         e.preventDefault();
+        setError(false);
         try {
             let res = await axios.post("http://localhost:5000/api/auth/register",{
                 username,
@@ -35,7 +36,7 @@ function Register(){
             });
             res.data && window.location.replace('/login');
         } catch(e){
-            console.log(e);
+            setError(true);
         }
     }
 
@@ -54,6 +55,7 @@ function Register(){
 
                 <button className="registerButton">Register</button>
             </form>
+            {error && <span>Something went wrong</span>}
             <div className="registerLogin">
                 <span>Already a user?</span>
                 <Link className="link" to="/login">Log in</Link>
